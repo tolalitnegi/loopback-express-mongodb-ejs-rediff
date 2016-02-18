@@ -1,0 +1,44 @@
+<% include header-loggedin %>
+
+<main role="main">
+
+  <div class="container">
+
+      <% include nav-loggedin %>
+
+      <section class="main-container">
+        <div class="col-xs-12 col-sm-8"">
+          
+        
+          <div class="col-xs-12 col-sm-10"> 
+              <input type="text" class="form-control" id="searchInput" name="searchInput" value="samsung galaxy edge">
+          </div>
+          <div class="col-xs-12 col-sm-2"> 
+              <button class="btn btn-success" id="searchBtn"> Search </button>
+          </div>
+          <div class="res-container">
+            <ul class="search-results list-group">
+
+            </ul>
+          </div>
+
+          <div class="search-history-container list-group well">
+            <div class="heading"> Search History  </div>
+            <ul class="search-history list-group col-xs-12">
+            </ul>
+          </div>
+        
+        </div>
+
+        <div class="col-xs-12 col-sm-4">
+          <label>Active Users</label>
+          <ul class="list-group active-user-list">
+          <ul>
+        </div>
+
+
+      </section>
+     </div>
+</main>
+
+<% include footer-jquery %>

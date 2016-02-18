@@ -1,0 +1,13 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <span class="navbar-brand" >Welcome, <%= shopper.firstname%>  <%= shopper.lastname%> </a>
+    </div>
+    <div class="user-details" data-userid="<%= shopper.id%>" data-name="<%= shopper.firstname%>  <%= shopper.lastname%>" >
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/userDetails?id=<%= shopper.id%>">My Account</a></li>
+        <li> <a href="/logout" class="btn btn-warning"> Logout</a></li> 
+      </ul>
+    </div>
+  </div> 
+</nav>  

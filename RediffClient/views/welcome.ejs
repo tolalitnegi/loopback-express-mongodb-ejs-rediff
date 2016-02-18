@@ -1,0 +1,24 @@
+<% include header %>
+
+<main role="main">
+  <div class="container">
+    
+    <h2>Welcome <%= shopper.firstname%> <%= shopper.lastname %> , your registration is successful</h5>
+    <h5>Reference Id: <%= shopper.id%></h5>
+
+    <div class="well">
+      <p> Please use below details to login </p>
+      <ul>
+        <li>Username: <%= shopper.username%></li>
+        <li>Password: <%= shopper.password%></li>
+      </ul>
+
+     <h3>To login   <a class="btn btn-succes" href="/login" > click here </a> <h3>
+
+    </div>
+    
+  </div>
+
+</main>
+
+<% include footer %>

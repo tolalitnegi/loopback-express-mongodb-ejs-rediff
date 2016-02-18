@@ -1,0 +1,42 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "filesystemstorage": {
+    "name": "filesystemstorage",
+    "connector": "storage",
+    "provider": "filesystem",
+    "root": "./server/storage"
+  },
+  "myMongo": {
+    "host": "127.0.0.1",
+    "port": 27017,
+    "database": "loopback-mongodb",
+    "name": "myMongo",
+    "connector": "mongodb",
+    "debug": true
+  },
+  "RediffService": {
+    "connector": "rest",
+    "debug": "false",
+    "operations": [{
+      "template": {
+        "method": "GET",
+        "url": "http://shopping.rediff.com/productv2/{searchText}/?output=json&comscorekw=pageview_candidate&div=1",
+        "headers": {
+          "accepts": "application/json",
+          "content-type": "application/json"
+        },
+        "query": {
+          "searchText": "{searchText}"
+        },
+        "responsePath": "$.search.products.category_wise[0]"
+      },
+      "functions": {
+        "find": ["searchText"]
+      }
+    }]
+  }
+
+}
